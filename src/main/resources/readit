@@ -1,0 +1,44 @@
+Kafka
+--------------
+
+Softwares :
+	>Apache Kafka*
+	>Confluent
+	>Offset explorer
+
+
+Steps :
+	>Start zookeeper
+		>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+		>Port Number : 2181
+
+
+	>Start kafka server / broker
+		>.\bin\windows\kafka-server-start.bat .\config\server.properties
+		>Port Number : 9092
+
+	>Create Topics
+		>.\bin\windows\kafka-topics.bat --create --topic ADD --bootstrap-server localhost:9092
+	>Delete Topics
+		>.\bin\windows\kafka-topics.bat --delete --topic ADD --bootstrap-server localhost:9092
+	>List Topics
+		>.\bin\windows\kafka-topics.bat --bootstrap-server localhost:9092 --list
+	>Desc Topics
+		>.\bin\windows\kafka-topics.bat --describe --topic fruits --bootstrap-server localhost:9092
+
+
+
+	>Produce
+		>.\bin\windows\kafka-console-producer.bat --topic ADD --bootstrap-server localhost:9092
+
+	>Consume
+		>.\bin\windows\kafka-console-consumer.bat --topic ADD --bootstrap-server localhost:9092 --from-beginning
+
+	>Consumer Group
+		>.\bin\windows\kafka-consumer-groupps.bat --bootstrap-server localhost:9092 --list
+
+
+
+
+
+
